@@ -34,9 +34,8 @@ if __name__ == '__main__':
     column_names = [col[0] for col in desc]
     data = [dict(zip(column_names, row))
             for row in sql_data]
-
-    # Replace the column names with your own.
-    df = pd.DataFrame(data, columns=['ID', 'UserName', 'TimeStamp'])
+    
+    df = pd.DataFrame(data, columns=column_names)
 
     print("\nDataFrame:")
     print(df)
